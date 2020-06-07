@@ -1,0 +1,139 @@
+﻿
+
+<div class="modal-content">
+	@using (Html.BeginForm("SaveCompany", "Company", FormMethod.Post, new { enctype = "multipart/form-data", onsubmit = "return fnValidate();" }))
+	{
+		@Html.ValidationSummary(true)
+		<div class="modal-header ">
+			<input type="hidden" id="hdn_CompanyID" value="0" name="CompanyID" />
+			<strong>New Company</strong>
+			<a href="javascript:void(0)" data-dismiss="modal" class="btn btn-danger modal-btn-emr"><i class="fa fa-close"></i></a>
+		</div>
+
+		<div class="card-body" style="padding-bottom:0px !important;">
+			<div class="row ">
+				<div class="col-md-4">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Company Name" name="CompanyName" />
+					</div>
+				</div>
+				<div class="col-md-2">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Company Code" name="CompanyCode" />
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<textarea rows="1" class="form-control" name="Address" placeholder="Address"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="City" name="City" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="State" name="State" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Zipcode" name="Zipcode" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Work Phone(Landline)" name="Workphone" />
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Mobile 1" name="Mobile1" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Mobile 2" name="Mobile2" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Mobile 3" name="Mobile3" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Mobile 4" name="Mobile4" />
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Govt. Regd No" name="Govtregdno" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="ESI No" name="Esi_no" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="EPF No" name="Epf_no" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="TN Police L.No" name="Tnpolicelno" />
+					</div>
+				</div>
+			</div>
+			<div class="row ">
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="ISO" name="Iso" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="Website" name="Website" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="PAN No" name="Pan_no" />
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="form-group">
+						<input type="text" class="form-control" placeholder="GSTIN" name="Gstn" />
+					</div>
+				</div>
+			</div>
+			<div class="row  p-12 m-b-10">
+				<div class="col-lg-12">
+					<div class="form-group">
+						<input type="file" id="dropify_Logo" class="dropify" name="file" data-allowed-file-extensions="png" data-max-file-size="100K">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal-footer">
+			<button type="submit" class="btn btn-primary">Save</button>
+			<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+		</div>
+	}
+</div>
+<script src="~/lib/dropify/js/dropify.min.js"></script>
+<script src="~/js/dropify.js"></script>
+<script type="text/javascript">
+	function fnValidate() {
+		return true;
+	}
+</script>

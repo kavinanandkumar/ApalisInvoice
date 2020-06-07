@@ -1,0 +1,115 @@
+﻿@model IEnumerable<ApalisInvoiceViewModel.AMPS_Config_CompanyViewModel>
+
+@{
+	ViewData["Title"] = "CompanyDetails";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Style{
+
+	<link href="~/lib/dropify/css/dropify.min.css" rel="stylesheet" />
+}
+<div class="block-header">
+	<div class="row">
+		<div class="col-lg-6 col-md-8 col-sm-12">
+			<h2> Company</h2>
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item"><a href="/Home/Dashboard"><i class="icon-home"></i></a></li>
+				<li class="breadcrumb-item">Set up</li>
+				<li class="breadcrumb-item active">Company</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="row clearfix">
+	<div class="col-md-12">
+		<div class="card">
+			<div class="header">
+				<h2>Company Details </h2>
+			</div>
+			<div class="body">
+				<div class="row clearfix">
+					<div class="body table-responsive p-15">
+						<table id="tbl_CompanyDetails" class="table table-hover m-b-0 c_list" style="width:100%;">
+							<thead>
+								<tr>
+									<th class="drilldown-dropdown" style="width:25%;">Company Name</th>
+									<th class="drilldown-dropdown" style="width:15%;">City</th>
+									<th class="drilldown-dropdown" style="width:15%;">State</th>
+									<th class="drilldown-dropdown" style="width:15%;">Mobile no</th>
+									<th class="drilldown-dropdown" style="width:25%;">Website</th>
+									<th style="width:5%;">Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								@foreach (var item in Model)
+								{
+									<tr>
+										<td>
+											<img src="~/@item.LogoPath.Replace("\\","/")" class="rounded-circle avatar" alt="">
+											<p class="c_name">@item.CompanyName</p>
+										</td>
+										<td>@item.City</td>
+										<td>@item.State</td>
+										<td>@item.Mobile1</td>
+										<td><a href="@item.Website" target="_blank"></a>@item.Website</td>
+										<td>
+											<button type="button" class="btn btn-info" title="Edit" onclick="fnEditCompany(@item.CompanyID)"><i class="fa fa-edit"></i></button>
+											<button type="button" data-type="confirm" class="btn btn-danger js-sweetalert" title="Delete" onclick="fnDeleteCompany(@item.CompanyID)"><i class="fa fa-trash-o"></i></button>
+										</td>
+									</tr>
+								}
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="divCompany" class="modal fade" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-exlg" role="document">
+		<div id="modalContent">
+
+		</div>
+	</div>
+</div>
+
+@section Scripts{
+	<script src="~/lib/jquery-datatable/jquery.dataTables.min.js"></script>
+	<script src="~/lib/jquery-datatable/dataTables.bootstrap4.min.js"></script>
+	<script src="~/lib/jquery-datatable/buttons/buttons.colVis.min.js"></script>
+	<script src="~/lib/jquery-datatable/buttons/buttons.html5.min.js"></script>
+	<script src="~/lib/jquery-datatable/buttons/buttons.print.min.js"></script>
+	<script src="~/lib/jquery-datatable/buttons/dataTables.buttons.min.js"></script>
+	<script src="~/lib/jquery-datatable/fixedeader/dataTables.fixedHeader.min.js"></script>
+	<script src="~/lib/jquery-datatable/fixedeader/dataTables.fixedColumns.min.js"></script>
+	<script src="~/lib/jquery-datatable/datatable.responsive.min.js"></script>
+	<script src="~/lib/sweetalert/sweetalert.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			$("#tbl_CompanyDetails").DataTable({
+				"dom": '<"pull-left"f><"pull-right"l>tip',
+				"bLengthChange": false
+			});
+			$('.dataTables_filter').addClass('pull-left');
+			$('#tbl_CompanyDetails_wrapper div:eq(2)').prepend('<button type="button" onclick="fnNewCompany()" class="btn btn-primary AP-btn-create"><i class="fa fa-plus-circle"></i> <span>Create</span></button>');
+		});
+		function fnNewCompany() {
+			$("#modalContent").empty();
+			$("#divCompany").modal("show");
+			$("#modalContent").load("/Company/NewCompany");
+		}
+		function fnEditCompany(companyID) {
+			alert(companyID);
+		}
+		function fnDeleteCompany(companyID) {
+			alert(companyID);
+		}
+	</script>
+}
+

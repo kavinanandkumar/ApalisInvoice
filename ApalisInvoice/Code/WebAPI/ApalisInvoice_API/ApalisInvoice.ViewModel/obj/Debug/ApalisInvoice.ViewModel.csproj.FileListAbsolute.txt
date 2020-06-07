@@ -1,0 +1,11 @@
+E:\Kavin\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\bin\Debug\ApalisInvoice.ViewModel.dll
+E:\Kavin\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\bin\Debug\ApalisInvoice.ViewModel.pdb
+E:\Kavin\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.csproj.CoreCompileInputs.cache
+E:\Kavin\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.dll
+E:\Kavin\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.pdb
+E:\Kavin\Project\ApalisInvoice\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\bin\Debug\ApalisInvoice.ViewModel.dll
+E:\Kavin\Project\ApalisInvoice\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\bin\Debug\ApalisInvoice.ViewModel.pdb
+E:\Kavin\Project\ApalisInvoice\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.csprojAssemblyReference.cache
+E:\Kavin\Project\ApalisInvoice\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.csproj.CoreCompileInputs.cache
+E:\Kavin\Project\ApalisInvoice\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.dll
+E:\Kavin\Project\ApalisInvoice\Code\WebAPI\ApalisInvoice_API\ApalisInvoice.ViewModel\obj\Debug\ApalisInvoice.ViewModel.pdb
